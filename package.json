@@ -1,0 +1,12 @@
+{
+  "name": "@azizka/todos",
+  "version": "0.8.5",
+  "description": "Todo list app",
+  "main": "index.js",
+  "keywords": [
+    "JavaScript",
+    "Todos"
+  ],
+  "author": "Aziz Kudaikulov (aziz.kudaikulov@gmail.com)",
+  "license": "ISC"
+}

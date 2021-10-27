@@ -22,6 +22,7 @@ export default class TodosGlobals {
   static get todosListFooterContainerClassName(): string;
   static get todosListFooterButtonsClassName(): string;
   static get todosListFooterButtonClassName(): string;
+  static get todosListFooterButtonActiveClassName(): string;
   static get todosListFooterDataName(): string;
   static get todosListFooterContainerDataName(): string;
   static get todosListFooterDisplayAllButtonDataName(): string;
@@ -31,6 +32,7 @@ export default class TodosGlobals {
 
   /* ---------------- TodoItem ------------------ */
   static get todoItemClassName(): string;
+  static get todoItemCheckedClassName(): string;
   static get todoItemDataName(): string;
   static get todoItemTemplateDataName(): string;
   static get todoItemContainerDataName(): string;

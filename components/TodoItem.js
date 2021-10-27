@@ -18,7 +18,7 @@ export default class TodoItem extends TodosBase {
 
     if(this._checkbox) {
       this._checkbox.checked = props?.completed ?? false;
-      this._checkbox.addEventListener('change', (event) => props?.onTodoStatusChange?.(event));
+      this._checkbox.addEventListener('change', () => props?.onTodoStatusChange?.(this));
     }
 
     if(this._container) {

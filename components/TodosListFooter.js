@@ -99,6 +99,7 @@ export default class TodosListFooter extends TodosBase {
   _createClearCompletedBtn() {
     this._clearCompletedBtn = document.createElement('div');
     this._clearCompletedBtn.classList.add(TodosGlobals.todosListFooterButtonClassName);
+    this._clearCompletedBtn.classList.add(TodosGlobals.todosListFooterButtonActiveClassName);
     this._clearCompletedBtn.textContent = 'Clear completed';
 
     this.component.appendChild(this._clearCompletedBtn);

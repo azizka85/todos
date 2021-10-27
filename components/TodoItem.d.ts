@@ -1,7 +1,7 @@
 import TodosBase from './TodosBase';
 
 export interface TodoItemProps {
-  onTodoStatusChange?(event: Event): void;
+  onTodoStatusChange?(item: TodoItem): void;
   completed?: boolean;
   title?: string;
 }

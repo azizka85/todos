@@ -24,14 +24,12 @@ export default class TodosListHeader extends TodosBase {
       this._input = elem.querySelector(`[${TodosGlobals.todosListHeaderInputDataName}]`);
     }
 
-    const cmp = this;
-
     if(this._iconRight) {
-      this._iconRight.addEventListener('click', () => cmp.display = true);
+      this._iconRight.addEventListener('click', () => this.display = true);
     }
 
     if(this._iconDown) {
-      this._iconDown.addEventListener('click', () => cmp.display = false);
+      this._iconDown.addEventListener('click', () => this.display = false);
     }
 
     if(this._input) {
@@ -109,6 +107,8 @@ export default class TodosListHeader extends TodosBase {
 
   _createInput() {
     this._input = document.createElement('input');
+
+    this._input.placeholder = 'What needs to be done?';
 
     this.component.appendChild(this._input);
   }

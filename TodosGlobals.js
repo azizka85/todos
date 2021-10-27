@@ -60,6 +60,10 @@ export default class TodosGlobals {
     return this.todosListFooterClassName + '-button';
   }
 
+  static get todosListFooterButtonActiveClassName() {
+    return this.todosListFooterButtonClassName + '-active';
+  }
+
   static get todosListFooterDataName() {
     return this.todosListDataName + '-footer';
   }
@@ -88,6 +92,10 @@ export default class TodosGlobals {
   /* ---------------- TodoItem ------------------ */
   static get todoItemClassName() {
     return this.todosListClassName + '-item';
+  }
+
+  static get todoItemCheckedClassName() {
+    return this.todoItemClassName + '-checked';
   }
 
   static get todoItemDataName() {

@@ -34,7 +34,7 @@ class TodoItem extends TodosBase {
       this.content = elem.querySelector(`[${TodoItemProps.contentDataName}]`);
     }
 
-    if(this.checkbox) {
+    if(this.checkbox) {      
       this.onTodoStatusChangeHandler = () => {
         if(this.checkbox?.checked) {    
           this.elem.classList.add(TodoItemProps.checkedClassName);
@@ -45,7 +45,7 @@ class TodoItem extends TodosBase {
         props?.onTodoStatusChange?.(this)
       };
 
-      this.checkbox.checked = props?.completed ?? false;
+      this.checkbox.checked = props?.completed ?? this.checkbox.checked ?? false;
       this.checkbox.addEventListener('change', this.onTodoStatusChangeHandler);
 
       if(props?.completed) {

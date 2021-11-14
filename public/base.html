@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testing todos component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="todos-1.0.0.css">
+  <script src="todos-1.0.0.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const todos = new TodosModule.Todos(null, {
+      onCreateTodo: updateStorage,
+      onClearCompleted: updateStorage,
+      onTodoStatusChange: updateStorage
+    });
+
+    let data = [];
+
+    try {
+      data = JSON.parse(localStorage.getItem('todos') ?? '[]') || [];
+    } catch {}
+
+    for(let item of data) {
+      todos.listComponent.addItem(item.title, item.completed);
+    }
+
+    document.getElementById('root').appendChild(todos.elem);
+
+    function updateStorage() {
+      const data = [];
+
+      for(let item of todos.listComponent.itemsList) {
+        data.push({
+          title: item.contentElem.textContent,
+          completed: item.checkboxElem.checked
+        });
+      }
+
+      localStorage.setItem('todos', JSON.stringify(data));
+    }
+
+    window.todos = todos;
+  </script>
+</body>
+</html>

@@ -1,8 +1,15 @@
-import TodosGlobals from './TodosGlobals';
-import TodosBase from "./components/TodosBase";
-import Todos from "./components/Todos";
-import TodosList from './components/TodosList';
-import TodosListFooter from './components/TodosListFooter';
-import TodoItem from './components/TodoItem';
+const { TodosBase } = require('./components/todos-base');
+const { TodosProps, Todos } = require('./components/todos');
+const { TodoItemProps, TodoItem } = require('./components/todo-item');
+const { TodosListDisplayMode, TodosFooterProps, TodosFooter } = require('./components/todos-footer');
+const { TodosHeaderProps, TodosHeader } = require('./components/todos-header');
+const { TodosListProps, TodosList } = require('./components/todos-list');
 
-export { TodosGlobals, TodosBase, Todos, TodosList, TodosListFooter, TodoItem };
+module.exports = {
+  TodosBase,
+  TodosProps, Todos,
+  TodoItemProps, TodoItem,
+  TodosListDisplayMode, TodosFooterProps, TodosFooter,
+  TodosHeaderProps, TodosHeader,
+  TodosListProps, TodosList
+};

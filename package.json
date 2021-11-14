@@ -1,12 +1,31 @@
 {
   "name": "@azizka/todos",
-  "version": "0.9.4",
-  "description": "Todo list app",
+  "version": "1.0.0",
+  "description": "Todos list app implemented on pure JavaScript",
   "main": "index.js",
+  "scripts": {},
   "keywords": [
-    "JavaScript",
-    "Todos"
+    "Todos",
+    "JavaScript"
   ],
-  "author": "Aziz Kudaikulov (aziz.kudaikulov@gmail.com)",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azizka85/todos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/azizka85/todos/issues"
+  },
+  "homepage": "https://github.com/azizka85/todos",
+  "author": "Aziz Kudaikulov <aziz.kudaikulov@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@types/jest": "^27.0.2",
+    "jest": "^27.3.1",
+    "jsdom": "^18.0.1",
+    "rollup": "^2.60.0",
+    "rollup-plugin-import-css": "^3.0.2",
+    "rollup-plugin-serve": "^1.1.0"
+  }
 }
